@@ -1,4 +1,7 @@
 import { useState } from 'react';
+import {
+  useNavigate,
+} from "react-router-dom";
 
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -11,18 +14,25 @@ import Container from '@mui/material/Container'
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import StackedLineChartIcon from '@mui/icons-material/StackedLineChart';
+import { Page } from '../classes/page';
 
-const pages = ['About', 'Blog', 'Contact'];
+const pages = [
+  new Page(0, 'Bio', '/bio'),
+  new Page(1, 'Blog', '/blog'),
+  new Page(2, 'Contact', '/contact'),
+]
 
 export default function Navbar() {
     const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
+    const navigate = useNavigate();
   
     const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
       setAnchorElNav(event.currentTarget);
     };
   
-    const handleCloseNavMenu = () => {
+    const handleCloseNavMenu = (page: Page) => {
       setAnchorElNav(null);
+      navigate(page.route)
     };
 
     return (
@@ -34,7 +44,7 @@ export default function Navbar() {
                 variant="h6"
                 noWrap
                 component="a"
-                href="#app-bar-with-responsive-menu"
+                href="/"
                 sx={{
                   mr: 2,
                   display: { xs: 'none', md: 'flex' },
@@ -53,7 +63,7 @@ export default function Navbar() {
                 variant="h5"
                 noWrap
                 component="a"
-                href="#app-bar-with-responsive-menu"
+                href="/"
                 sx={{
                   mr: 2,
                   display: { xs: 'flex', md: 'none' },
@@ -98,8 +108,8 @@ export default function Navbar() {
                   }}
                 >
                   {pages.map((page) => (
-                    <MenuItem key={page} onClick={handleCloseNavMenu}>
-                      <Typography textAlign="center">{page}</Typography>
+                    <MenuItem key={page.label} onClick={() => handleCloseNavMenu(page)}>
+                      <Typography textAlign="center">{page.label}</Typography>
                     </MenuItem>
                   ))}
                 </Menu>
@@ -107,11 +117,11 @@ export default function Navbar() {
               <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' }, justifyContent: 'flex-end'}}>
                 {pages.map((page) => (
                   <Button
-                    key={page}
-                    onClick={handleCloseNavMenu}
+                    key={page.label}
+                    onClick={() => handleCloseNavMenu(page)}
                     sx={{ my: 2, color: 'white', display: 'block', textTransform: 'none' }}
                   >
-                    {page}
+                    {page.label}
                   </Button>
                 ))}
               </Box>
