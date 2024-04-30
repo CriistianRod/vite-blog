@@ -1,22 +1,22 @@
 import { BottomNavigation, BottomNavigationAction } from '@mui/material'
-import RestoreIcon from '@mui/icons-material/Restore'
-import FavoriteIcon from '@mui/icons-material/Favorite'
-import LocationOnIcon from '@mui/icons-material/LocationOn'
+import LinkedInIcon from '@mui/icons-material/LinkedIn'
+import InstagramIcon from '@mui/icons-material/Instagram'
+import ContactPageIcon from '@mui/icons-material/ContactPage'
+import { Link } from 'react-router-dom'
 
 export default function Footer() {
     return(
         <>
-        
         <BottomNavigation
                 showLabels
-            //   value={value}
-            //   onChange={(event, newValue) => {
-            //     setValue(newValue);
-            //   }}
             >
-                <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
-                <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
-                <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} />
+                <BottomNavigationAction
+                    label="LinkedIn"
+                    icon={<LinkedInIcon />}
+                    href="https://www.linkedin.com/in/cristian-rodr%C3%ADguez-713bb3173/"
+                    />
+                <BottomNavigationAction label="Instagram" icon={<InstagramIcon />} href="https://www.instagram.com/criistiianrod/"/>
+                <BottomNavigationAction label="Contacto" icon={<ContactPageIcon />} LinkComponent={Link} to="/contact"/>
             </BottomNavigation>
         </>
     )

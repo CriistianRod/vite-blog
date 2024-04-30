@@ -45,7 +45,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
       <Grid>
-      <RouterProvider router={router} />
+      <RouterProvider router={router} /> 
       </Grid>
     </ThemeProvider>
   </React.StrictMode>,

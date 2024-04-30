@@ -1,7 +1,5 @@
 import { useState } from 'react';
-import {
-  useNavigate,
-} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -19,7 +17,7 @@ import { Page } from '../classes/page';
 const pages = [
   new Page(0, 'Bio', '/bio'),
   new Page(1, 'Blog', '/blog'),
-  new Page(2, 'Contact', '/contact'),
+  new Page(2, 'Contacto', '/contact'),
 ]
 
 export default function Navbar() {
