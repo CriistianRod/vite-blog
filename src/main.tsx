@@ -12,6 +12,7 @@ import ErrorPage from './error-page.tsx'
 import Bio from './routes/bio.tsx'
 import Blog from './routes/blog.tsx'
 import Contact from './routes/contact.tsx'
+import { Grid } from '@mui/material'
 
 const router = createBrowserRouter([
   {
@@ -43,7 +44,9 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
+      <Grid>
       <RouterProvider router={router} />
+      </Grid>
     </ThemeProvider>
   </React.StrictMode>,
 )
