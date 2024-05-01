@@ -11,9 +11,9 @@ export default function Footer() {
         <BottomNavigation
                 // showLabels
             >
-                <BottomNavigationAction label="LinkedIn" icon={<LinkedInIcon />} href="https://www.linkedin.com/in/cristian-rodr%C3%ADguez-713bb3173/"/>
-                <BottomNavigationAction label="GitHub" icon={<GitHubIcon />} href="https://github.com/CriistianRod"/>
-                <BottomNavigationAction label="Instagram" icon={<InstagramIcon />} href="https://www.instagram.com/criistiianrod/"/>
+                <BottomNavigationAction label="LinkedIn" icon={<LinkedInIcon />} href="https://www.linkedin.com/in/cristian-rodr%C3%ADguez-713bb3173/" target='_blank'/>
+                <BottomNavigationAction label="GitHub" icon={<GitHubIcon />} href="https://github.com/CriistianRod" target='_blank'/>
+                <BottomNavigationAction label="Instagram" icon={<InstagramIcon />} href="https://www.instagram.com/criistiianrod/" target='_blank'/>
                 <BottomNavigationAction label="Contacto" icon={<PersonIcon />} LinkComponent={Link} to="/contact"/>
             </BottomNavigation>
         </>

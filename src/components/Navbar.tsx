@@ -34,8 +34,10 @@ export default function Navbar() {
     };
 
     return (
-        <AppBar position="static" sx= {{ marginBottom: 3 }}>
-          <Container maxWidth="xl">
+        <AppBar position="fixed" >
+          <Container 
+          maxWidth="md"
+          >
             <Toolbar disableGutters>
               <StackedLineChartIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
               <Typography
