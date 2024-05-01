@@ -9,7 +9,7 @@ import CssBaseline from '@mui/material/CssBaseline'
 import './index.css'
 import Root from './routes/root.tsx'
 import ErrorPage from './error-page.tsx'
-import Bio from './routes/bio.tsx'
+import About from './routes/about.tsx'
 import Blog from './routes/blog.tsx'
 import Contact from './routes/contact.tsx'
 import { Grid } from '@mui/material'
@@ -21,12 +21,12 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />
   },
   {
-    path: "bio",
-    element: <Bio />
-  },
-  {
     path: "blog",
     element: <Blog />
+  },
+  {
+    path: "about",
+    element: <About />
   },
   {
     path: "contact",

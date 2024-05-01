@@ -15,8 +15,8 @@ import StackedLineChartIcon from '@mui/icons-material/StackedLineChart';
 import { Page } from '../classes/page';
 
 const pages = [
-  new Page(0, 'Bio', '/bio'),
-  new Page(1, 'Blog', '/blog'),
+  new Page(0, 'Blog', '/blog'),
+  new Page(1, 'Sobre mí', '/about'),
   new Page(2, 'Contacto', '/contact'),
 ]
 
@@ -34,7 +34,7 @@ export default function Navbar() {
     };
 
     return (
-        <AppBar position="static">
+        <AppBar position="static" sx= {{ marginBottom: 3 }}>
           <Container maxWidth="xl">
             <Toolbar disableGutters>
               <StackedLineChartIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />

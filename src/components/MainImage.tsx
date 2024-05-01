@@ -13,7 +13,7 @@ export default function MainImage() {
     return (
         <>
             <Card
-                // sx={{ m: 3 }}
+                sx={{ marginBottom: 3 }}
             >
                 <Box
                     component="img"

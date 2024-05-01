@@ -26,7 +26,7 @@ export default function ErrorPage() {
           </p>
         </div>
         <footer style={{ position: "fixed", bottom: 0 }}>
-          <Footer></Footer>
+          <Footer />
         </footer>
         </Grid>
       </Container>
