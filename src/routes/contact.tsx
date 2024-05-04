@@ -49,15 +49,15 @@ export default function Contact() {
                                     <EmailIcon />
                                     <Typography sx={{ paddingLeft: 1 }}>cristian.frontend.dev@gmail.com</Typography>
                                 </IconButton>
-                                <IconButton aria-label="LinkedIn" href="https://www.linkedin.com/in/cristian-rodr%C3%ADguez-713bb3173/">
+                                <IconButton aria-label="LinkedIn" href="https://www.linkedin.com/in/cristian-rodr%C3%ADguez-713bb3173/" target='_blank'>
                                     <LinkedInIcon />
                                     <Typography sx={{ paddingLeft: 1 }}>LinkedIn</Typography>
                                 </IconButton>
-                                <IconButton aria-label="GitHub" href="https://github.com/CriistianRod">
+                                <IconButton aria-label="GitHub" href="https://github.com/CriistianRod" target='_blank'>
                                     <GitHubIcon />
                                     <Typography sx={{ paddingLeft: 1 }}>GitHub</Typography>
                                 </IconButton>
-                                <IconButton aria-label="Instagram" href="https://www.instagram.com/criistiianrod/">
+                                <IconButton aria-label="Instagram" href="https://www.instagram.com/criistiianrod/" target='_blank'>
                                     <InstagramIcon />
                                     <Typography sx={{ paddingLeft: 1 }}>Instagram</Typography>
                                 </IconButton>
